@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Mediafly Presenter</title>
+
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+
+</head>
+<body class="container">
+
+    <div class="row padding-15 bottom-border">
+        <div class="col-xs-3">
+            <div id="startMeeting" class="play-presentation">
+                <span class="fa fa-play"></span>      
+                <span class="play-presentation-text">Play Presentation</span>
+            </div>
+        </div>  
+        <div class="col-xs-3">
+            <div id="stopMeeting" class="end-presentation">
+                <span class="fa fa-pause"></span>      
+                <span class="end-presentation-text">End Presentation</span>
+            </div>
+        </div>
+        <div class="col-xs-6">
+                <span class="fa fa-times close-btn pull-right"></span>      
+        </div>
+    </div>
+
+    <div class="row slides-container">
+        <div class="col-sm-8">
+            <div id="presentationArea"></div>
+        </div>
+        <div class="col-sm-4">
+            <div class="controls-container text-center">
+                <button id="prevSlide" class="btn buttons">
+                    <span class="fa fa-arrow-circle-left controls"></span> Back
+                </button>
+
+                <button id="nextSlide" class="btn buttons">
+                    <span class="fa fa-arrow-circle-right controls"></span> Next
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/jquery-1.6.4.js"></script>
+    <script src="scripts/jquery.signalR-2.2.0.js"></script>
+    <script src="https://slides.mediafly.com/signalr/hubs"></script>
+    <script src="scripts/presentation.js"></script>
+    <script src="mfly-commands/src/mflyCommands.js"></script>
+</body>
+</html>
