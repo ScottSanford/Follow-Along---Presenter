@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html ng-app="presentationApp">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +8,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Mediafly Presenter</title>
 
-    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="common/libs/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="common/libs/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="common/libs/angular-bootstrap/ui-bootstrap-csp.css">
+    <link rel="stylesheet" href="common/css/styles.css">
 
 
 </head>
 <body class="container">
-
+    <div ui-view class="container"></div>
     <div class="row padding-15 bottom-border">
         <div class="col-xs-3">
             <div id="startMeeting" class="play-presentation">
@@ -51,10 +52,22 @@
         </div>
     </div>
 
+    <!-- START: SCRIPS FOR SLIDES SERVER -->
     <script src="scripts/jquery-1.6.4.js"></script>
     <script src="scripts/jquery.signalR-2.2.0.js"></script>
     <script src="https://slides.mediafly.com/signalr/hubs"></script>
     <script src="scripts/presentation.js"></script>
+    
+    <!-- START: ANGULARJS -->
+    <script src="common/libs/angular/angular.js"></script>
+    <script src="common/libs/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="common/libs/angular-bootstrap/ui-bootstrap.js"></script>
+    <script src="common/libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="mfly-commands/src/mflyCommands.js"></script>
+    <script src="app.js"></script>
+
+    <!-- START: CONTROLLERS -->
+    <script src="components/presenter/presenter.js"></script>
+
 </body>
 </html>
