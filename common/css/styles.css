@@ -3,8 +3,16 @@
 				Global Styles
 
 ====================================================*/
+html, body {
+	height:100%;
+}
+
 body {
-	background-color:#353535;
+	background-color:#535353;
+}
+
+.ui-view-container {
+	height: 100%;
 }
 
 @font-face {
@@ -20,11 +28,6 @@ body {
 @font-face {
 	font-family: Proxy-SemiBold;
     src: url(../fonts/ProximaNova-Semibold.ttf);
-}
-
-h1,h2,h3,h4,h5,h6,p, div {
-	color:#fff;
-	font-family: 'Proxy-Light';
 }
 
 .container {
@@ -43,17 +46,63 @@ h1,h2,h3,h4,h5,h6,p, div {
 				Presenter Styles
 
 ====================================================*/
-.btn {
-    background-color: #7c7c7c;
+.flexbox {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+}
+
+.flexbox > * {
+	flex: 0 0 auto;
+}
+
+.navbar {
+	border-radius: 0;
+	background-color:#494948;
+	box-shadow: 0 3px 5px rgba(25,25,25,.75);
+	border:none;
+}
+
+.play-container {
+	padding:0 10px;
+}
+
+.navbar-default .navbar-text {
+    color:#ccc;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color:#ccc;
+	padding:10px 15px;
+}
+
+.btn-view-list {
+	background-color: #7c7c7c;
     border-color: #333;
     color: #fff;
 }
 
-.slides-container {
-	margin-top: 20px;
+.o-button {
+	border: #666;
+    border-bottom: 2px solid #333;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    padding: 7px 12px 5px;
+    text-align: center;
+    -webkit-transition: background-color .3s linear,border-color .3s linear;
+    -o-transition: background-color .3s linear,border-color .3s linear;
+    transition: background-color .3s linear,border-color .3s linear;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
 }
 
-.close-btn {
+/*.navbar-right li a span {
 	font-size:20px;
 }
-
+*/

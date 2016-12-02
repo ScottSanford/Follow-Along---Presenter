@@ -1,6 +1,7 @@
 angular.module("presentationApp", [
         'ui.router', 
-        'ui.bootstrap'
+        'ui.bootstrap', 
+        'myDirectives'
     ])
 
     .config(function ($compileProvider, $stateProvider, $urlRouterProvider) { 

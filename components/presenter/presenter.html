@@ -1,0 +1,17 @@
+<div class="flexbox">
+    
+    <nav-header></nav-header>
+
+    <main class="presentation-container" id="slide-menu-container">
+
+    </main>
+
+    <nav class="row presentation-footer-container">
+    <div class="col-xs-12 text-center">
+            <div ng-repeat="s in slide">
+                <span class="current-slide-name" ng-if="current === $index">{{ s.name }}</span>
+            </div>
+        </div>
+    </nav>
+        
+</div>
